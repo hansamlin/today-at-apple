@@ -1,0 +1,36 @@
+.container {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+
+  a {
+    display: flex;
+    align-self: center;
+  }
+
+  @media screen and (max-width: 1199px) {
+    width: 124px;
+    height: 36px;
+    top: 0;
+    right: 0;
+    background: rgba(163, 255, 232, 0.4);
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 158px;
+    height: 38px;
+    top: 10px;
+    right: calc((100% - 1140px) / 2);
+    background: rgba(163, 255, 232, 0.6);
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

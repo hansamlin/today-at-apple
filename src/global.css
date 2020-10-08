@@ -1,0 +1,18 @@
+@font-face {
+  font-family: Noto Sans;
+  src: url("./font/NotoSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: Noto Sans TC;
+  src: url("./font/NotoSansTC-Medium.otf");
+}
+
+body {
+  font-family: "Noto Sans", "Noto Sans TC";
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}

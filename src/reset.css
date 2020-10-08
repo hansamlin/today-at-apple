@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+th,
+td,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+figure,
+address {
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+td,
+th {
+  font-size: 100%;
+  line-height: 1.8;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+nav ul {
+  list-style: none;
+}
+img,
+fieldset {
+  border: 0;
+}
+img {
+  vertical-align: middle;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption,
+th {
+  text-align: center;
+  font-style: normal;
+}
+a,
+ins {
+  text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
+input,
+select {
+  vertical-align: middle;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var,
+optgroup {
+  font-style: normal;
+  font-weight: normal;
+}
+
+abbr {
+  border: 0;
+  font-variant: normal;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+}
