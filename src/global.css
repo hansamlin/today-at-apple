@@ -8,8 +8,13 @@
   src: url("./font/NotoSansTC-Medium.otf");
 }
 
+@font-face {
+  font-family: PingFang TC;
+  src: url('./font/PingFangTC-Medium.ttf');
+}
+
 body {
-  font-family: "Noto Sans", "Noto Sans TC";
+  font-family: "Noto Sans", "Noto Sans TC", "PingFang TC";
 }
 
 #root {

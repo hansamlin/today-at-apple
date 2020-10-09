@@ -1,25 +1,25 @@
 import React from "react";
 import styles from "./introduction.module.scss";
-import phone from "../images/title/title.png";
-import pad from "../images/title/pad.png";
-import web from '../images/title/web.png'
+import phone320 from "../images/introduction/phone_320.png";
+import phone375 from "../images/introduction/phone_375.png";
+import phone414 from "../images/introduction/phone_414.png";
+import pad from "../images/introduction/pad.png";
+import web from "../images/introduction/web.png";
+import Title from "./image";
 
 export default function Introduction() {
   return (
     <div className={styles.container}>
       <div className={styles.grid}>
         <h1>
-          <picture>
-            <source
-              srcSet={pad}
-              media="(min-width: 768px) and (max-width: 1199px)"
-            />
-            <source
-              srcSet={phone}
-              media="(max-width: 767px)"
-            />
-            <img src={web} alt="免費系列課程 為品牌注入嶄新可能" />
-          </picture>
+          <Title
+            phone320={phone320}
+            phone375={phone375}
+            phone414={phone414}
+            pad={pad}
+            web={web}
+            alt="免費系列課程 為品牌注入嶄新可能"
+          />
         </h1>
         <h2>
           從商品攝影、Logo

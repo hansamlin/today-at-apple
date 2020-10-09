@@ -1,5 +1,8 @@
 .container {
-  background: rgba(235, 239, 242, 1);
+  background-image: linear-gradient(to right, transparent 14px, #ebeff2 14px),
+    linear-gradient(to bottom, transparent 16px, #ebeff2 16px);
+  background-size: 15px 100%, 100% 17px;
+  background-position: center 10px;
 
   @media (max-width: 374px) {
     padding: 38.77px 0 60px 0;
@@ -22,8 +25,13 @@
   }
 
   h1 img {
-    @media (max-width: 767px) {
+    @media (max-width: 413px) {
       width: 100%;
+    }
+
+    @media screen and (min-width: 414px) and (max-width: 767px) {
+      display: block;
+      margin: 0 calc((50% - 50vw) / 2);
     }
 
     @media (min-width: 768px) and (max-width: 1199px) {
@@ -104,24 +112,5 @@
 }
 
 .grid {
-  margin: 0 auto;
-  @media (max-width: 374px) {
-    width: 280px;
-  }
-
-  @media (min-width: 375px) and (max-width: 413px) {
-    width: 335px;
-  }
-
-  @media (min-width: 414px) and (max-width: 767px) {
-    width: 335px;
-  }
-
-  @media (min-width: 768px) and (max-width: 1199px) {
-    width: 768px;
-  }
-
-  @media (min-width: 1200px) {
-    width: 1140px;
-  }
+  composes: grid from "./layout.module.scss";
 }

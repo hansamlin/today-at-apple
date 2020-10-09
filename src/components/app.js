@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./app.module.scss";
 import Banner from "./banner";
 import Classes from "./classes";
 import Company from "./company";
