@@ -7,8 +7,9 @@ function getCountdown(time) {
   const startDateTime = new Date(time).getTime();
   const nowDateTime = new Date().getTime();
 
+  const isTimeout = startDateTime <= nowDateTime;
   let offsetTime;
-  if (nowDateTime > startDateTime) {
+  if (isTimeout) {
     offsetTime = (nowDateTime - startDateTime) / 1000;
   } else {
     offsetTime = (startDateTime - nowDateTime) / 1000;
@@ -18,14 +19,12 @@ function getCountdown(time) {
   const h = parseInt((offsetTime / 60 / 60) % 60, 10);
   const d = parseInt(offsetTime / 60 / 60 / 24, 10);
 
-  return { d, h, m };
+  return { d, h, m, isTimeout };
 }
 
 export default function useCountdown() {
-  const { d, h, m } = getCountdown(startingTime);
-  const [countdown, setCountdown] = useState({ d, h, m });
-
-  const isTimeout = new Date(startingTime).getTime() <= new Date().getTime();
+  const { d, h, m, isTimeout } = getCountdown(startingTime);
+  const [countdown, setCountdown] = useState({ d, h, m , isTimeout});
 
   useEffect(() => {
     const interval = setInterval(() => {
