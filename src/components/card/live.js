@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Image from "../image";
-import styles from "./live.module.scss";
+import styles from "./card-live.module.scss";
 
 export default function Card({ src, h3, h4, date }) {
   return (
@@ -19,3 +20,10 @@ export default function Card({ src, h3, h4, date }) {
     </div>
   );
 }
+
+Card.propTypes = {
+  src: PropTypes.object.isRequired,
+  h3: PropTypes.string.isRequired,
+  h4: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+};

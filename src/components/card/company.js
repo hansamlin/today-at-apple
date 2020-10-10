@@ -1,5 +1,6 @@
 import React from "react";
-import styles from "./company.module.scss";
+import PropTypes from "prop-types";
+import styles from "./card-company.module.scss";
 import Link from "../link";
 import Button from "../button";
 
@@ -20,3 +21,10 @@ export default function Card({ logo, content, href, title }) {
     </div>
   );
 }
+
+Card.propTypes = {
+  logo: PropTypes.element.isRequired,
+  content: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};

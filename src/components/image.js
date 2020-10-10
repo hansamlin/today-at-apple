@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export default function Title({ phone320, phone375, phone414, pad, web, alt }) {
+export default function Image({ phone320, phone375, phone414, pad, web, alt }) {
   return (
     <picture>
       <source srcSet={pad} media="(min-width: 768px) and (max-width: 1199px)" />
@@ -17,3 +18,12 @@ export default function Title({ phone320, phone375, phone414, pad, web, alt }) {
     </picture>
   );
 }
+
+Image.propTypes = {
+  phone320: PropTypes.string.isRequired,
+  phone375: PropTypes.string.isRequired,
+  phone414: PropTypes.string.isRequired,
+  pad: PropTypes.string.isRequired,
+  web: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+};

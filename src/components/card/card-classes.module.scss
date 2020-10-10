@@ -1,0 +1,277 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 374px) {
+    & + .wrapper {
+      margin-top: 58.79px;
+    }
+  }
+
+  @media screen and (min-width: 375px) and (max-width: 413px) {
+    width: 287px;
+    margin: 0 auto;
+
+    & + .wrapper {
+      margin-top: 68px;
+    }
+  }
+
+  @media screen and (min-width: 414px) and (max-width: 767px) {
+    width: 287px;
+    margin: 0 auto;
+
+    & + .wrapper {
+      margin-top: 68px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 287px;
+
+    &:nth-child(even) {
+      margin-left: 49px;
+    }
+
+    &:nth-child(n + 3) {
+      margin-top: 64px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 333px;
+
+    & + .wrapper {
+      margin-left: 70px;
+    }
+  }
+}
+
+.target {
+  transition: transform 0.1s, box-shadow 0.1s;
+  border-radius: 6px;
+
+  &:hover {
+    transform: translate(-3px, -3px);
+
+    .container {
+      box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.07),
+        8px 8px 0 0px rgba(163, 255, 232, 0.2), 8px 8px 0 #fff,
+        10px 10px 0 0px #74f2d7, 8px 10px 0 0px #74f2d7, 6px 10px 0 0px #74f2d7,
+        10px 7px 0 0px #74f2d7, 9px 6px 0 0px #74f2d7;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 6px;
+
+  @media screen and (max-width: 374px) {
+    height: 315.24px;
+    box-shadow: 0px 1.32733px 5.30931px 1.32733px rgba(0, 0, 0, 0.07);
+  }
+
+  @media screen and (min-width: 375px) and (max-width: 413px) {
+    width: 100%;
+    height: 324px;
+    box-shadow: 0px 1.32733px 5.30931px 1.32733px rgba(0, 0, 0, 0.07);
+  }
+
+  @media screen and (min-width: 414px) and (max-width: 767px) {
+    width: 100%;
+    height: 324px;
+    box-shadow: 0px 1.32733px 5.30931px 1.32733px rgba(0, 0, 0, 0.07);
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 287px;
+    height: 324px;
+    box-shadow: 0px 1.32733px 5.30931px 1.32733px rgba(0, 0, 0, 0.07);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 333px;
+    height: 375px;
+    box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.07);
+  }
+
+  &.disabled {
+    @media screen and (min-width: 1200px) {
+      box-shadow: none;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+
+    figure,
+    h3,
+    .nt {
+      opacity: 0.6;
+    }
+  }
+
+  img {
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+  }
+
+  figcaption {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    @media screen and (max-width: 374px) {
+      padding: 13.62px 13.66px 15px;
+    }
+
+    @media screen and (min-width: 375px) and (max-width: 413px) {
+      padding: 15px 14px 16px;
+    }
+
+    @media screen and (min-width: 414px) and (max-width: 767px) {
+      padding: 15px 14px 16px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      padding: 15px 14px 16px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding: 20px 20px 25px;
+    }
+  }
+
+  h3 {
+    flex-grow: 1;
+    color: rgba(27, 27, 25, 1);
+
+    @media screen and (max-width: 1199px) {
+      font-size: 1rem;
+      line-height: 24px;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 1.125rem;
+      line-height: 30px;
+    }
+  }
+
+  .willOpen {
+    position: absolute;
+    background: #ffcc4b;
+    border: 1px solid #403d3b;
+    box-sizing: border-box;
+    text-align: center;
+    color: rgba(27, 27, 25, 1);
+
+    @media screen and (max-width: 374px) {
+      width: 125.85px;
+      height: 31.21px;
+      line-height: 31.21px;
+      bottom: 19.51px;
+    }
+
+    @media screen and (min-width: 375px) and (max-width: 413px) {
+      width: 129px;
+      height: 32px;
+      line-height: 32px;
+      bottom: 20px;
+    }
+
+    @media screen and (min-width: 414px) and (max-width: 767px) {
+      width: 129px;
+      height: 32px;
+      line-height: 32px;
+      bottom: 20px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 129px;
+      height: 32px;
+      line-height: 32px;
+      bottom: 20px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 139px;
+      height: 34px;
+      line-height: 34px;
+      bottom: 25px;
+    }
+  }
+
+  .nt {
+    text-align: right;
+    color: rgba(27, 27, 25, 1);
+
+    @media screen and (max-width: 1199px) {
+      font-size: 1rem;
+      line-height: 19.91px;
+      span {
+        font-size: 2rem;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 1.25rem;
+      span {
+        font-size: 2.625rem;
+      }
+    }
+  }
+}
+
+.related {
+  align-self: center;
+  transition: color 0.3s;
+
+  @media screen and (max-width: 374px) {
+    margin-top: 23.04px;
+  }
+
+  @media screen and (min-width: 375px) and (max-width: 1199px) {
+    margin-top: 24px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 30px;
+  }
+
+  &:hover span {
+    color: #49e6c9;
+    background-image: url("../../images/arrow-hover.svg");
+  }
+}
+
+.icon {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  background-size: cover;
+  z-index: 1;
+
+  @media screen and (max-width: 374px) {
+    width: 58.54px;
+    height: 58.38px;
+    background-image: url("../../images/classes/apple-logo-phone.png");
+    left: 9.76px;
+    top: -29.19px;
+  }
+
+  @media screen and (min-width: 375px) and (max-width: 1199px) {
+    width: 60px;
+    height: 60px;
+    background-image: url("../../images/classes/apple-logo-pad.png");
+    left: 10px;
+    top: -30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 64px;
+    height: 64px;
+    background-image: url("../../images/classes/apple-logo-web.png");
+    left: 8px;
+    top: -32px;
+  }
+}

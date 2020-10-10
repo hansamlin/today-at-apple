@@ -2,11 +2,11 @@ import React from "react";
 import phone from "../images/banner/phone_320.png";
 import pad from "../images/banner/pad.png";
 import web from "../images/banner/web.png";
-import styles from "./banner.module.css";
+import styles from "./banner.module.scss";
 
 export default function Banner() {
   return (
-    <div>
+    <div className={styles.container}>
       <picture>
         <source
           srcSet={pad}
