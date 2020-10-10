@@ -5,7 +5,7 @@ import styles from "./card-live.module.scss";
 
 export default function Card({ src, h3, h4, date }) {
   return (
-    <a href="#" title={h3} className={styles.container}>
+    <a href="/" title={h3} className={styles.container}>
       <Image
         phone320={src.phone320}
         phone375={src.phone375}
