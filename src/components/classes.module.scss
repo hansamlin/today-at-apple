@@ -30,7 +30,7 @@
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       width: 702px;
-      margin: 0 calc((702px - 100vw) / 2);
+      margin: 0 calc(50% - 351px);
     }
 
     @media screen and (min-width: 1200px) {
