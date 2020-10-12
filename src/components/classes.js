@@ -41,7 +41,6 @@ const card = [
       "https://hahow.in/courses/5f7c209762ad22756c7a1c74?utm_source=eventpage&utm_medium=apple&utm_campaign=taa2020&mts_s=eventpage&mts_m=apple&mts_c=taa2020&mts_t=brand",
     relatedHref:
       "https://hahow.in/@5a3e1500ea647c008cf13148?utm_source=eventpage&utm_medium=apple&utm_campaign=taa2020&mts_s=eventpage&mts_m=apple&mts_c=taa2020&mts_t=brand",
-    disabled: false,
   },
   {
     src: {
@@ -57,7 +56,6 @@ const card = [
       "https://hahow.in/courses/5f7c210b1de7982fb413a3e9?utm_source=eventpage&utm_medium=apple&utm_campaign=taa2020&mts_s=eventpage&mts_m=apple&mts_c=taa2020&mts_t=brand",
     relatedHref:
       "https://hahow.in/courses?page=1&search=%E9%A6%AE%E5%AE%87+IF+OFFICE&utm_source=eventpage&utm_medium=apple&utm_campaign=taa2020&mts_s=eventpage&mts_m=apple&mts_c=taa2020&mts_t=brand",
-    disabled: true,
   },
   {
     src: {
@@ -73,13 +71,12 @@ const card = [
       "https://hahow.in/courses/5f7c212262ad2203e77a1cc9?utm_source=eventpage&utm_medium=apple&utm_campaign=taa2020&mts_s=eventpage&mts_m=apple&mts_c=taa2020&mts_t=brand",
     relatedHref:
       "https://hahow.in/@peichunchao?utm_source=eventpage&utm_medium=apple&utm_campaign=taa2020&mts_s=eventpage&mts_m=apple&mts_c=taa2020&mts_t=brand",
-    disabled: false,
   },
 ];
 
 export default function Classes() {
   const { component: Component, isTimeout } = useCountdown();
-
+  
   return (
     <div className={styles.container}>
       <div className={styles.grid}>
@@ -103,7 +100,7 @@ export default function Classes() {
               src={e.src}
               title={e.title}
               linkText={e.lineText}
-              disabled={e.disabled}
+              disabled={!isTimeout || i === 1}
               href={e.href}
               relatedHref={e.relatedHref}
             />

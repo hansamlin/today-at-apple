@@ -1,8 +1,10 @@
 import React from "react";
 import styles from "./liveBroadcast.module.scss";
 import phone320 from "../images/live-broadcast/phone_320.png";
+import phone375 from "../images/live-broadcast/phone_375.png";
 import phone414 from "../images/live-broadcast/phone_414.png";
 import pad from "../images/live-broadcast/pad.png";
+import web from "../images/live-broadcast/web.png";
 import Title from "./image";
 import phoneLimit from "../images/live-broadcast/phone-limit.png";
 import padLimit from "../images/live-broadcast/pad-limit.png";
@@ -81,10 +83,10 @@ export default function LiveBroadcast() {
         <h2>
           <Title
             phone320={phone320}
-            phone375={phone414}
+            phone375={phone375}
             phone414={phone414}
             pad={pad}
-            web={pad}
+            web={web}
             alt="四場免費直播課程，與講師線上交流"
           />
         </h2>
@@ -99,6 +101,7 @@ export default function LiveBroadcast() {
             />
           ))}
         </div>
+        <div className={styles.clear} />
         <Button
           href="http://apple.com/today"
           className={styles.button}

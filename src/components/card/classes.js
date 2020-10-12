@@ -46,7 +46,13 @@ export default function Card({
       {disabled ? (
         card
       ) : (
-        <a href={href} title={title} target="_blank" rel="noopener noreferrer" className={styles.target}>
+        <a
+          href={href}
+          title={title}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.target}
+        >
           {card}
         </a>
       )}

@@ -71,6 +71,10 @@
   }
 }
 
+.clear {
+  clear: left;
+}
+
 .button {
   composes: bg from "./layout.module.scss";
 
