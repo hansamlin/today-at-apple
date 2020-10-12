@@ -6,7 +6,7 @@ import styles from "./banner.module.scss";
 
 export default function Banner() {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="banner">
       <picture>
         <source
           srcSet={pad}
