@@ -5,57 +5,32 @@ $color: #e2e2e299;
 
   @media (max-width: 374px) {
     padding: 38.77px 0 60px 0;
-    background-image: linear-gradient($color 0.29632px, transparent 0),
-      linear-gradient(90deg, $color 0.29632px, transparent 0),
-      linear-gradient($color 0.592639px, transparent 0),
-      linear-gradient(90deg, $color 0.592639px, transparent 0);
-    background-size: 17.64px 17.64px, 17.61px 17.61px, 141.08px 141.08px,
-      140.89px 140.89px;
-    background-position: -31.52px 25.02px;
+    background-image: url("../images/banner/mask-320.png");
+    background-size: 320px;
   }
 
   @media (min-width: 375px) and (max-width: 413px) {
     padding: 30px 0 50.64px 0;
-    background-image: linear-gradient($color 0.29632px, transparent 0),
-      linear-gradient(90deg, $color 0.29632px, transparent 0),
-      linear-gradient($color 0.592639px, transparent 0),
-      linear-gradient(90deg, $color 0.592639px, transparent 0);
-    background-size: 17.64px 17.64px, 17.61px 17.61px, 141.08px 141.08px,
-      140.89px 140.89px;
-    background-position: -31.52px 25.02px;
+    background-image: url("../images/banner/mask-375.png");
+    background-size: 375px;
   }
 
   @media (min-width: 414px) and (max-width: 767px) {
     padding: 24.73px 0 40px 0;
-    background-image: linear-gradient($color 0.29632px, transparent 0),
-      linear-gradient(90deg, $color 0.29632px, transparent 0),
-      linear-gradient($color 0.592639px, transparent 0),
-      linear-gradient(90deg, $color 0.592639px, transparent 0);
-    background-size: 17.64px 17.64px, 21.47px 21.47px, 141.08px 141.08px,
-      171.71px 171.71px;
-    background-position: -38.41px 27.38px;
+    background-image: url("../images/banner/mask-414.png");
+    background-size: 414px;
   }
 
   @media (min-width: 768px) and (max-width: 1199px) {
     padding: 64px 0 90px 0;
-    background-image: linear-gradient($color 0.29632px, transparent 0),
-      linear-gradient(90deg, $color 0.29632px, transparent 0),
-      linear-gradient($color 0.592639px, transparent 0),
-      linear-gradient(90deg, $color 0.592639px, transparent 0);
-    background-size: 17.64px 17.64px, 21.46px 21.46px, 141.08px 141.08px,
-      171.7px 171.7px;
-    background-position: -52.12px 27.02px;
+    background-image: url("../images/banner/mask-pad.png");
+    background-size: 768px;
   }
 
   @media (min-width: 1200px) {
     padding: 100px 0;
-    background-image: linear-gradient($color 0.5px, transparent 0),
-      linear-gradient(90deg, $color 0.5px, transparent 0),
-      linear-gradient($color 1px, transparent 0),
-      linear-gradient(90deg, $color 1px, transparent 0);
-    background-size: 20.95px 20.95px, 20.95px 20.95px, 167.6px 167.6px,
-      167.6px 167.6px;
-    background-position: -35.51px 62.7px;
+    background-image: url("../images/banner/mask-web.png");
+    background-size: 1440px;
   }
 
   h1 img {
