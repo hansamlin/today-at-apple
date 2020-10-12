@@ -33,6 +33,15 @@ $color: #e2e2e299;
     background-size: 1440px;
   }
 
+  h1 {
+    transition: transform 0.5s ease-in;
+    transform: translateX(-100%);
+
+    &.in {
+      transform: translateX(0);
+    }
+  }
+
   h1 img {
     @media (max-width: 413px) {
       width: 100%;
