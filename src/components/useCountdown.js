@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./classes.module.scss";
 
-const startingTime = "2020-11-02 12:00:00+0800";
+const startingTime = "2020-11-02T12:00:00+0800";
 
 function getCountdown(time) {
   const startDateTime = new Date(time).getTime();
@@ -18,7 +18,7 @@ function getCountdown(time) {
   const m = parseInt((offsetTime / 60) % 60, 10);
   const h = parseInt((offsetTime / 60 / 60) % 60, 10);
   const d = parseInt(offsetTime / 60 / 60 / 24, 10);
-
+  
   return { d, h, m, isTimeout };
 }
 

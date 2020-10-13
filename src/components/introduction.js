@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./introduction.module.scss";
 import phone320 from "../images/introduction/phone_320.png";
 import phone375 from "../images/introduction/phone_375.png";
@@ -9,27 +9,29 @@ import Title from "./image";
 
 export default function Introduction() {
   const [active, setActive] = useState(false);
+  const h1 = useRef();
 
   useEffect(() => {
+    const target = h1.current;
     const obser = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting === false && active === false) {
+        if (entries[0].isIntersecting === true && active === false) {
           setActive(true);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 1 }
     );
-    obser.observe(document.getElementById("banner"));
+    obser.observe(target);
 
     return () => {
-      obser.unobserve(document.getElementById("banner"));
+      obser.unobserve(target);
     };
   }, [active]);
 
   return (
     <div className={styles.container}>
       <div className={styles.grid}>
-        <h1 className={active ? styles.in : ""}>
+        <h1 className={active ? styles.in : ''} ref={h1}>
           <Title
             phone320={phone320}
             phone375={phone375}

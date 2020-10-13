@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./classes.module.scss";
 import Title from "./image";
 import phone320 from "../images/classes/phone320-classes-title.png";
@@ -76,12 +76,31 @@ const card = [
 
 export default function Classes() {
   const { component: Component, isTimeout } = useCountdown();
-  
+  const [active, setActive] = useState(false);
+  const h2 = useRef();
+
+  useEffect(() => {
+    let target = h2.current;
+    const obser = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting === true && active === false) {
+          setActive(true);
+        }
+      },
+      { threshold: 0 }
+    );
+    obser.observe(target);
+
+    return () => {
+      obser.unobserve(target);
+    };
+  }, [active]);
+
   return (
     <div className={styles.container}>
       <div className={styles.grid}>
         <div className={styles.header}>
-          <h2>
+          <h2 ref={h2} className={active ? styles.in : ""}>
             <Title
               phone320={phone320}
               phone375={phone375}
@@ -100,7 +119,7 @@ export default function Classes() {
               src={e.src}
               title={e.title}
               linkText={e.lineText}
-              disabled={!isTimeout || i === 1}
+              disabled={!isTimeout}
               href={e.href}
               relatedHref={e.relatedHref}
             />

@@ -1,3 +1,4 @@
+//eslint-disable-next-line
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./card-classes.module.scss";
@@ -18,7 +19,15 @@ export default function Card({
 
   const card = (
     <div className={className}>
-      <i className={styles.icon} />
+      <a
+        href="https://hahow.in/@5f7c1de062ad22eb607a1a00?mts_c=taa2020&mts_m=profile&mts_s=eventpage&mts_t=brand&rc=1&utm_campaign=taa2020&utm_medium=profile&utm_source=eventpage"
+        title="todayatapple的檔案"
+        className={styles.icon}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        todayatapple的檔案
+      </a>
       <figure>
         <Image
           phone320={src.phone320}

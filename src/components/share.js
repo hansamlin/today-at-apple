@@ -14,7 +14,7 @@ export default function Share() {
     copyText.style.position = "absolute";
     copyText.style.top = "-100px";
     copyText.value = window.location.href;
-    
+
     ref.current.append(copyText);
 
     copyText.select();
@@ -32,6 +32,8 @@ export default function Share() {
           window.location.href
         )}`}
         title="Fb"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <img src={fb} alt="" />
       </a>
@@ -40,6 +42,8 @@ export default function Share() {
           window.location.href
         )}`}
         title="Line"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <img src={line} alt="" />
       </a>

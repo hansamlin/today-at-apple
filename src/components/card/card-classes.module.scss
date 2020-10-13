@@ -126,7 +126,7 @@
     }
 
     @media screen and (min-width: 375px) and (max-width: 413px) {
-      padding: 15px 14px 16px;
+      padding: 14px 14px 16px;
     }
 
     @media screen and (min-width: 414px) and (max-width: 767px) {
@@ -145,6 +145,10 @@
   h3 {
     flex-grow: 1;
     color: rgba(27, 27, 25, 1);
+
+    @media screen and (min-width: 414px) and (max-width: 767px) {
+      letter-spacing: -0.5px;
+    }
 
     @media screen and (max-width: 1199px) {
       font-size: 1rem;
@@ -250,6 +254,7 @@
   background-color: transparent;
   background-size: cover;
   z-index: 1;
+  font-size: 0;
 
   @media screen and (max-width: 374px) {
     width: 58.54px;

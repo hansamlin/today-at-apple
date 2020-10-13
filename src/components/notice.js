@@ -6,7 +6,7 @@ export default function Notice() {
     <div className={styles.container}>
       <div className={styles.title}>注意事項</div>
       <div className={styles.content}>
-        1.免費直播課程將透過 CiscoWebex™進行，報名完成後將會於活動前收到直播網址，無需下載或支付任何費用。
+        1.報名直播課程將會帶您跳離 Hahow 網站並前往 Apple 網站進行直播課程報名頁面。
         <br />
         2. 活動時間請以 UTC+8 台灣標準時間為主。
         <br />

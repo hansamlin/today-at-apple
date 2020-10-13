@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./liveBroadcast.module.scss";
 import phone320 from "../images/live-broadcast/phone_320.png";
 import phone375 from "../images/live-broadcast/phone_375.png";
@@ -77,10 +77,30 @@ const card = [
 ];
 
 export default function LiveBroadcast() {
+  const [active, setActive] = useState(false);
+  const h2 = useRef();
+
+  useEffect(() => {
+    let target = h2.current;
+    const obser = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting === true && active === false) {
+          setActive(true);
+        }
+      },
+      { threshold: 0 }
+    );
+    obser.observe(target);
+
+    return () => {
+      obser.unobserve(target);
+    };
+  }, [active]);
+
   return (
     <div className={styles.container}>
       <div className={styles.grid}>
-        <h2>
+        <h2 ref={h2} className={active ? styles.in : ""}>
           <Title
             phone320={phone320}
             phone375={phone375}

@@ -11,7 +11,7 @@ export default function Card({ src, h3, h4, date }) {
         phone375={src.phone375}
         phone414={src.phone414}
         pad={src.pad}
-        web={src.pad}
+        web={src.web}
         alt={h3}
       />
       <h3 className={styles.h3}>{h3}</h3>
