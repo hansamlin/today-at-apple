@@ -41,7 +41,7 @@ $color: #e2e2e299;
     }
 
     &.in::after {
-      transform: translateX(100%);
+      transform: translateX(1170px);
     }
 
     &::after {
@@ -51,45 +51,35 @@ $color: #e2e2e299;
       top: 0;
       height: 100%;
       background-color: #f3f5f7;
-      transition: transform 1.8s ease-in;
+      transition: transform 1.8s linear;
 
       @media screen and (max-width: 374px) {
-        background-image: url("../images/banner/mask-320.png");
         background-size: 320px;
         width: 320px;
-        background-position: 0px -39px;
         left: calc((280px - 100vw) / 2);
       }
 
       @media screen and (min-width: 375px) and (max-width: 413px) {
-        background-image: url("../images/banner/mask-375.png");
         background-size: 375px;
         width: 375px;
-        background-position: 0px -30px;
         left: calc((335px - 100vw) / 2);
       }
 
       @media screen and (min-width: 414px) and (max-width: 767px) {
-        background-image: url("../images/banner/mask-414.png");
         background-size: 414px;
         width: 414px;
-        background-position: 0px -7px;
         left: calc((335px - 100vw) / 2);
       }
 
       @media screen and (min-width: 768px) and (max-width: 1199px) {
-        background-image: url("../images/banner/mask-pad.png");
         background-size: 768px;
         width: 636px;
-        background-position: -72px 45px;
         left: 0;
       }
 
       @media screen and (min-width: 1200px) {
         width: 100%;
-        background-image: url("../images/banner/mask-web.png");
         background-size: 1440px;
-        background-position: -158px -16px;
         left: 0;
       }
     }

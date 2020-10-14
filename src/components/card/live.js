@@ -3,9 +3,15 @@ import PropTypes from "prop-types";
 import Image from "../image";
 import styles from "./card-live.module.scss";
 
-export default function Card({ src, h3, h4, date }) {
+export default function Card({ href, src, h3, h4, date }) {
   return (
-    <a href="/" title={h3} className={styles.container}>
+    <a
+      href={href}
+      title={h3}
+      className={styles.container}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <Image
         phone320={src.phone320}
         phone375={src.phone375}
@@ -22,6 +28,7 @@ export default function Card({ src, h3, h4, date }) {
 }
 
 Card.propTypes = {
+  href: PropTypes.string.isRequired,
   src: PropTypes.object.isRequired,
   h3: PropTypes.string.isRequired,
   h4: PropTypes.string.isRequired,

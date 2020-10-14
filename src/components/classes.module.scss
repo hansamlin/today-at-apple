@@ -21,7 +21,7 @@
     }
 
     &.in::after {
-      transform: translateX(100%);
+      transform: translateX(1170px);
     }
 
     &::after {
@@ -31,7 +31,7 @@
       height: 100%;
       background: #fcfcfd;
       top: 0;
-      transition: transform 1.8s ease-in;
+      transition: transform 1.8s linear;
 
       @media screen and (max-width: 767px) {
         width: 100%;
@@ -40,7 +40,8 @@
 
       @media screen and (min-width: 768px) and (max-width: 1199px) {
         width: 702px;
-        left: calc((702px - 100vw) / 2);
+        left: 50%;
+        transform: translateX(-50%);
       }
 
       @media screen and (min-width: 1200px) {

@@ -30,7 +30,7 @@
     position: relative;
 
     &.in::after {
-      transform: translateX(100%);
+      transform: translateX(1170px);
     }
 
     &::after {
@@ -42,7 +42,7 @@
       background: #f1f5f8;
       left: 0;
       top: 0;
-      transition: transform 1.8s ease-in;
+      transition: transform 1.8s linear;
     }
 
     img {

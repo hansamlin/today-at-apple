@@ -23,6 +23,7 @@ import Button from "./button";
 
 const card = [
   {
+    href: "https://apple.co/34PQVBj",
     src: {
       phone320: phoneLimit,
       phone375: phoneLimit,
@@ -36,6 +37,7 @@ const card = [
       "Hahow 好學校執行長江前緯，將分享自己創立台灣線上學習領導品牌的心路歷程，從打破既有傳統學習模式，到內容創新設計，帶你探索多元的可能性，激盪品牌引領市場的無窮潛力。",
   },
   {
+    href: "https://apple.co/2SViJOZ",
     src: {
       phone320: phoneAca,
       phone375: phoneAca,
@@ -49,6 +51,7 @@ const card = [
       "讓專業攝影師 Ada 以創作案例和故事分享攝影基礎概念，實際透過燈光角度展現攝影構圖技巧和層次，只要有手機，也能拍出具有質感與魅力的「商品情境照」！",
   },
   {
+    href: "https://apple.co/34XCXh0",
     src: {
       phone320: phoneSelflogo,
       phone375: phoneSelflogo,
@@ -62,6 +65,7 @@ const card = [
       "透過設計師馮宇的創作案例和故事介紹，一窺 LOGO 設計的心法與概念，從設計主題、關鍵字到視覺化圖騰，實際透過 ipad 展現 LOGO 的設計流程！",
   },
   {
+    href: "https://apple.co/2FtORGE",
     src: {
       phone320: phoneTogether,
       phone375: phoneTogether,
@@ -114,6 +118,7 @@ export default function LiveBroadcast() {
           {card.map((e, i) => (
             <Card
               key={`live-card-${String(i)}`}
+              href={e.href}
               src={e.src}
               h3={e.h3}
               h4={e.h4}
